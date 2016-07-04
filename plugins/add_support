@@ -1,6 +1,6 @@
 do
 local function run(msg, matches)
-local support = 1014777639
+local support = 1048326871
 local user = msg.from.id
 
     if matches[1]:lower() == "sks" or "/sks" or "tosk" then
