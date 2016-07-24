@@ -110,12 +110,9 @@ else
     echo "Run $0 install"
     exit 1
   fi
-
-  if [ -f $HOME/.telegram-cli/state ]; then
-    echo "state found"
-    echo "remove it!"
-    rm -rf $HOME/.telegram-cli/state
-  fi
-
-  ./tg/bin/telegram-cli -k ./tg/tg-server.pub -s ./bot/bot.lua -l 1 -E $@ --disable-link-preview
+  while true; do
+   rm -r ../.telegram-cli/state
+   ./tg/bin/telegram-cli -k ./tg/tg-server.pub -s ./bot/Signal_bot.lua -l 1 -E $@
+   sleep 3
+  done
 fi
